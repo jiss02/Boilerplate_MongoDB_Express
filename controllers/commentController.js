@@ -1,6 +1,6 @@
 import commentService from '../services/commentService.js'
 
-export async function getComments (req, res) {
+async function getComments (req, res) {
   try {
     const { postId } = req.params;
     const comments = await commentService.getComments(postId);
